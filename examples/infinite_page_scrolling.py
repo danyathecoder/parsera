@@ -9,7 +9,7 @@ Here's the example how you can load webpage of any length even with the custom b
 """
 
 
-async def main():
+async def main(url):
     async with async_playwright() as p:
         browser = await p.firefox.launch(headless=False, slow_mo=100)
         loader = PageLoader(browser=browser)
@@ -18,6 +18,6 @@ async def main():
 
 
 if __name__ == "__main__":
-    url = "https://www.reddit.com/"
-    result = asyncio.run(main())
+    URL = "https://www.reddit.com/"
+    result = asyncio.run(main(URL))
     print(result)
