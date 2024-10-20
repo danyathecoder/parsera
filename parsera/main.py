@@ -117,7 +117,7 @@ async def get_url_data(url, scheme):
 
     parsera = ParseraScript(model=model)
     return await parsera.arun(
-        url=url, elements=scheme, playwright_script=repeating_script
+        url=url, elements=scheme, playwright_script=repeating_script, scrolls_limit=0
     )
 
 

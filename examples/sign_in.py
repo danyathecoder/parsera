@@ -34,6 +34,7 @@ async def get_parsera_credits():
             "credits": "number of credits",
         },
         playwright_script=repeating_script,
+        scrolls_limit=0,
     )
 
 
